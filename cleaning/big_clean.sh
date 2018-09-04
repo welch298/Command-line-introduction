@@ -1,5 +1,5 @@
 tar -xzf $1 -C $2
-NewDirectory=$( $1 : ${#$1}-4 )
+NewDirectory=$(basename $1 ".tgz")
 echo $NewDirectory
 cd $2/big_dir
 grep -l 'DELETE ME!' * > FilesToDelete
